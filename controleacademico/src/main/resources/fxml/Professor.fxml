@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.materialdesignicons.MaterialDesignIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane id="AnchorPane" prefHeight="391.0" prefWidth="565.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="view.ProfessorController">
+   <children>
+      <VBox layoutX="216.0" layoutY="105.0" prefHeight="308.0" prefWidth="483.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <HBox prefHeight="18.0" prefWidth="565.0" spacing="10.0">
+               <children>
+                  <MaterialDesignIconView fx:id="btnInclusao" glyphName="PLUS_BOX" onMouseClicked="#btnInclusaoClick" size="20" />
+                  <MaterialDesignIconView fx:id="btnAlteracao" glyphName="PENCIL_BOX" onMouseClicked="#btnAlteracaoClick" size="20" />
+                  <MaterialDesignIconView fx:id="btnExclusao" glyphName="MINUS_BOX" onMouseClicked="#btnExclusaoClick" size="20" />
+               </children>
+               <padding>
+                  <Insets bottom="5.0" left="5.0" top="5.0" />
+               </padding>
+            </HBox>
+            <TableView fx:id="tblvwProfessores" prefHeight="316.0" prefWidth="565.0">
+               <columns>
+                  <TableColumn prefWidth="96.66665399074554" style="-fx-alignment: center;" text="CPF">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="cpf" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="289.99999237060547" text="Nome">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="nome" />
+                     </cellValueFactory>
+                  </TableColumn>
+                  <TableColumn prefWidth="165.33334350585938" text="Email">
+                     <cellValueFactory>
+                        <PropertyValueFactory property="email" />
+                     </cellValueFactory>
+                  </TableColumn>
+               </columns>
+            </TableView>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
